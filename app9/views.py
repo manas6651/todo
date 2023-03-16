@@ -23,7 +23,7 @@ def delete_record(request,id):
     todo = Todo.objects.get(id=id)
     todo.delete()
     return HttpResponseRedirect('/')
-
+# Main page
 def update(request,id):
     todo=Todo.objects.get(id=id)
     if request.method == 'POST':
@@ -33,4 +33,3 @@ def update(request,id):
         return HttpResponseRedirect('/')
     return render(request, 'update.html' , {'todo':todo})
 
-# Main page
