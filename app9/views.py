@@ -33,3 +33,4 @@ def update(request,id):
         return HttpResponseRedirect('/')
     return render(request, 'update.html' , {'todo':todo})
 
+# Main page
